@@ -13,3 +13,11 @@
     padding: 24px;
     box-sizing: border-box;
 }
+
+.community-home{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: rgb(20, 33, 174);
+}

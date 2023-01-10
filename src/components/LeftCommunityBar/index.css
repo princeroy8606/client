@@ -1,0 +1,11 @@
+.left-Com-sidebar{
+    width:35%;
+    box-shadow: 1px 1px 0 rgba(254, 16, 16, 0.826);
+    transition: box-shadow ease-in-out 0.1s, transform ease-in-out 0.1s;
+    transform: translateZ(0);
+    box-sizing: border-box;
+    font-size: 13px;
+    height: auto;
+    margin-top: 4rem;
+    background-color: yellow;
+}
