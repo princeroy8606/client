@@ -1,5 +1,5 @@
 import profile from  '../../assets/profile.png'
-
+import Posts from './Posts'
 import './index.css'
 
 const CommunityHomebar = () => {
@@ -17,6 +17,7 @@ const CommunityHomebar = () => {
                     </div>
                 </div>
             </div>
+            <Posts/>
         </div>
     )
 }
