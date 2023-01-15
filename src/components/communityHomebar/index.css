@@ -112,6 +112,7 @@
   border: none;
   width: 85%;
   background: whitesmoke;
+  line-break: auto;
 }
 .search-box input:focus {
   outline: none;
@@ -121,6 +122,19 @@
   height: 90%;
   overflow-y: scroll;
   overflow-x: visible;
+  padding: 0.5rem;
+}
+
+.post-container::-webkit-scrollbar {
+ width: .5rem;
+}
+.post-container::-webkit-scrollbar-thumb{
+  background: rgb(236, 194, 165);
+  border-radius: 1.5rem;
+  height: 1rem;
+}
+.post-container::-webkit-scrollbar-track{
+  background: rgb(143, 142, 143);
 }
 
 /* post card design */
@@ -130,6 +144,7 @@
   border-radius: 0.25rem;
   width: 100%;
   margin-bottom: 1rem;
+  box-shadow: 2px 2px 5px 2px rgb(183, 182, 180);
 }
 
 .post-details {
@@ -140,10 +155,14 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  background: rgb(67, 78, 81);
+  color: white;
+  border-radius: 0.25rem 0.25rem 0 0;
 }
 .person-details {
   padding: 0.25rem;
   display: flex;
+  cursor: pointer;
 }
 .person-details img {
   width: 4rem;
@@ -160,6 +179,7 @@
 .add-friend {
   padding: 0.5rem;
   display: flex;
+  cursor: pointer;
   align-items: center;
 }
 .posted-text {
@@ -174,13 +194,17 @@
 }
 
 .post-item img {
-  width: 100%;
+  padding: 0.5rem;
+  width: 97%;
+}
+.like-display {
+  padding-left: 0.5rem;
 }
 
 .response {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid black;
+  border-top: 1px solid rgba(101, 101, 101, 0.84);
 }
 .reactions {
   display: flex;
@@ -195,15 +219,31 @@
   align-items: center;
   justify-content: center;
   width: 30%;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   cursor: pointer;
 }
 .like:hover,
 .comment:hover,
 .share:hover {
-  background: rgb(255, 255, 255);
+  background: rgb(145, 166, 228);
 }
 
-.comments{
+.comments {
   display: none;
+}
+
+.reactions img,
+.add-friend img {
+  padding: 0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.like-display {
+  display: flex;
+  align-items: center;
+}
+.like-display img {
+  padding: 0.25rem;
+  width: 1rem;
+  height: 1rem;
 }

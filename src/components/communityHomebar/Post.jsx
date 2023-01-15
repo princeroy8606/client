@@ -1,4 +1,9 @@
-import React from 'react'
+import React from 'react';
+import Like from '../../assets/like.png';
+import Likes from '../../assets/likes.png';
+import Comment from '../../assets/message.png';
+import Share from '../../assets/share.png';
+import Follow from '../../assets/add-friend.png';
 
 const Post = ({ post }) => {
     return (
@@ -14,7 +19,7 @@ const Post = ({ post }) => {
                         </div>
                     </div>
                     <div className="add-friend">
-                        <img src="" alt="+" />
+                        <img src={Follow} alt="+" />
                         <p>Follow</p>
                     </div>
                 </div>
@@ -25,6 +30,7 @@ const Post = ({ post }) => {
             <div className="post-item">
                 <img src={post.image} alt="" />
                 <div className="like-display">
+                    <img src={Likes} alt="" />
                     <p>{post.likes}</p>
                 </div>
             </div>
@@ -32,15 +38,15 @@ const Post = ({ post }) => {
             <div className="response">
                 <div className="reactions">
                     <div className="like">
-                        <img src="" alt="" />
+                        <img src={Like} alt="" />
                         <p>Like</p>
                     </div>
                     <div className="comment">
-                        <img src="" alt="" />
+                        <img src={Comment} alt="" />
                         <p>Comment</p>
                     </div>
                     <div className="share">
-                        <img src="" alt="" />
+                        <img src={Share} alt="" />
                         <p>Share</p>
                     </div>
                 </div>
