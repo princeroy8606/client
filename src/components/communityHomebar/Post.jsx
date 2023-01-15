@@ -6,29 +6,29 @@ const Post = ({ post }) => {
             {/*  */}
             <div className="post-details">
                 <div className="person">
-                    <div className="image-container">
+                    <div className="person-details">
                         <img src={post.profilePic} alt="" />
-                    </div>
-                    <div className="name-date">
-                        <h4>{post.name}</h4>
-                        <p>{post.date}</p>
+                        <div className="name-date">
+                            <h4>{post.name}</h4>
+                            <p>{post.date}</p>
+                        </div>
                     </div>
                     <div className="add-friend">
-                        <img src="" alt="add" />
+                        <img src="" alt="+" />
+                        <p>Follow</p>
                     </div>
                 </div>
-                <div className="post-text">
+                <div className="posted-text">
                     <p>{post.postText}</p>
                 </div>
             </div>
             <div className="post-item">
                 <img src={post.image} alt="" />
+                <div className="like-display">
+                    <p>{post.likes}</p>
+                </div>
             </div>
-            {/*  */}
-            <div className="like-display">
-                <p>{post.likes}</p>
-            </div>
-            {/*  */}
+
             <div className="response">
                 <div className="reactions">
                     <div className="like">
@@ -52,7 +52,7 @@ const Post = ({ post }) => {
                             <img src="" alt="" />
                         </div>
                         <div className="all-comments">
-                            <div className="comment">
+                            <div className="comment-box">
                                 <img src="" alt="" />
                                 <div className="coment-details">
                                     <h4>{post.name}</h4>
