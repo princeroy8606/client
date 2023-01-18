@@ -1,11 +1,152 @@
-.left-Com-sidebar{
-    width:35%;
-    box-shadow: 1px 1px 0 rgba(254, 16, 16, 0.826);
-    transition: box-shadow ease-in-out 0.1s, transform ease-in-out 0.1s;
-    transform: translateZ(0);
-    box-sizing: border-box;
-    font-size: 13px;
-    height: auto;
-    margin-top: 4rem;
-    background-color: yellow;
+.left-Com-sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 35%;
+  box-sizing: border-box;
+  height: auto;
+  margin-top: 4rem;
+}
+.recent-topics-container {
+  width: 50%;
+  height: 40%;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 1px 1px 5px 1px rgb(196, 196, 196);
+  display: flex;
+  flex-direction: column;
+}
+.topics-head {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+.recent-topics {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 0.5rem;
+}
+.topic {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  /* background: red; */
+  margin-bottom: 1rem;
+  padding: 0.25rem;
+}
+.topic img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+.topic-right {
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+  padding-left: 0.25rem;
+}
+.topic-right h4 {
+  margin: 0;
+}
+.topic-right p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.recent-topics::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.recent-topics::-webkit-scrollbar-thumb {
+  background: rgb(236, 194, 165);
+  border-radius: 1.5rem;
+  height: 1rem;
+}
+.recent-topics::-webkit-scrollbar-track {
+  background: rgb(143, 142, 143);
+}
+
+.friends-container {
+  width: 50%;
+  height: 40%;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 1px 1px 5px 1px rgb(196, 196, 196);
+  display: flex;
+  flex-direction: column;
+}
+.friends-top {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.friends-bottom {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+.frinds-filter {
+  display: flex;
+  justify-content: space-around;
+}
+.frinds-filter p {
+  padding: 0.15rem 0.35rem 0.15rem 0.35rem;
+  border-radius: 0.75rem;
+  background: rgb(165, 165, 164);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.friends-box {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 0.5rem;
+}
+.frinds {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.frinds-profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+.frinds-profile img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+.remove-friends {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.remove-friends img {
+  width: 1rem;
+  height: 1rem;
+}
+.veiw-all-friends {
+  width: 100%;
+  display: flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+.veiw-all-friends p {
+  margin: 0;
+}
+.friends-box::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.friends-box::-webkit-scrollbar-thumb {
+  background: rgb(236, 194, 165);
+  border-radius: 1.5rem;
+  height: 1rem;
+}
+.friends-box::-webkit-scrollbar-track {
+  background: rgb(143, 142, 143);
 }
