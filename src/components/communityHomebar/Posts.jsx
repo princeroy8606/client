@@ -12,7 +12,7 @@ function Posts({ data }) {
             image: 'https://149351115.v2.pressablecdn.com/wp-content/uploads/2023/01/StackGivesBack-2022.png',
             vedio: '',
             profilePic: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyfLCs5lVr1Ev5xUChMTIDKUSn5C8Wa223HA&usqp=CAU",
-            likes: '56'
+            likes: 56
         },
         {
             id: 2,
@@ -22,7 +22,7 @@ function Posts({ data }) {
             image: 'https://149351115.v2.pressablecdn.com/wp-content/uploads/2022/07/q2-2022-ceo_00.png',
             vedio: '',
             profilePic: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRAf9gA-CRlCv5tHlzbNDJnmqvnNG1jRrHGA&usqp=CAU",
-            likes: '340'
+            likes: 340
         },
         {
             id: 3,
@@ -32,21 +32,15 @@ function Posts({ data }) {
             image: 'https://149351115.v2.pressablecdn.com/wp-content/uploads/2021/08/se-10-year.png',
             vedio: '',
             profilePic: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrHdqMHlM-9YoVRL5CkDPXLdPC2VK3K9OMKg&usqp=CAU",
-            likes: '1080'
+            likes: 1080
         }
     ]);
 
-    console.log(data)
-    console.log(Object.keys(data))
     useEffect(() => {
         if (data && Object.keys(data).length !== 0) {
             setPost([data, ...post])
         }
-        console.log(post)
     }, [data]);
-
-
-
 
     return (
         <div className='postarea-container'>
