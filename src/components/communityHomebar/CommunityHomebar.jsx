@@ -22,8 +22,10 @@ const CommunityHomebar = () => {
         });
     }
     useEffect(() => {
-        setFile(null);
-        setText("")
+        if (data && Object.keys(data).length !== 0) {
+            setText("")
+            setFile(null)
+        }
     }, [handleClick]);
     return (
         <div className="community-homebar">
