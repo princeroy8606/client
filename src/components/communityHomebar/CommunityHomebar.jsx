@@ -17,10 +17,14 @@ const CommunityHomebar = () => {
             date: "01-12-2023",
             postText: text,
             image: file,
-            profilePic:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKXvbOTtM0YatiO0WJ06pJmvaj6a7Dq2kJtg&usqp=CAU',
+            profilePic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKXvbOTtM0YatiO0WJ06pJmvaj6a7Dq2kJtg&usqp=CAU',
             likes: 0,
         });
     }
+    useEffect(() => {
+        setFile(null);
+        setText("")
+    }, [handleClick]);
     return (
         <div className="community-homebar">
             <div className="activity-feed">
