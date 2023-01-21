@@ -5,13 +5,17 @@ import Comment from '../../assets/message.png';
 import Share from '../../assets/share.png';
 import Follow from '../../assets/add-friend.png';
 import { useState } from 'react';
-
 const Post = ({ post }) => {
-    let [like, setLike] = useState()
-    console.log(post.likes)
+    const [like, setLike] = useState(false)
+
     const handleLike = () => {
-        setLike = post.likes + 1;
+        if (like !== true) {
+            post.likes = post.likes + 1;
+        } else {
+            post.likes = post.likes - 1;
+        }
         console.log(like)
+        setLike(!like)
     }
     return (
         <div className='post-card'>
@@ -38,15 +42,16 @@ const Post = ({ post }) => {
                 <img src={post.image} alt="" />
                 <div className="like-display">
                     <img src={Likes} alt="" />
-                    <p>{like}</p>
+                    <p>{post.likes}</p>
                 </div>
             </div>
 
             <div className="response">
                 <div className="reactions">
-                    <div className="like">
+                    <div className="like"
+                        onClick={handleLike}>
                         <img src={Like} alt="" />
-                        <p onClick={handleLike}>Like</p>
+                        <p >Like</p>
                     </div>
                     <div className="comment">
                         <img src={Comment} alt="" />

@@ -18,7 +18,7 @@ const CommunityHomebar = () => {
             postText: text,
             image: file,
             profilePic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKXvbOTtM0YatiO0WJ06pJmvaj6a7Dq2kJtg&usqp=CAU',
-            likes: 0,
+            likes: 1,
         });
     }
     useEffect(() => {
