@@ -6,8 +6,8 @@ import Share from '../../assets/share.png';
 import Follow from '../../assets/add-friend.png';
 import { useState } from 'react';
 const Post = ({ post }) => {
-    const [like, setLike] = useState(false)
 
+    const [like, setLike] = useState(false)
     const handleLike = () => {
         if (like !== true) {
             post.likes = post.likes + 1;
@@ -17,6 +17,8 @@ const Post = ({ post }) => {
         console.log(like)
         setLike(!like)
     }
+    
+    
     return (
         <div className='post-card'>
             {/*  */}
