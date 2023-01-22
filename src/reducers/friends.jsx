@@ -1,3 +1,5 @@
+
+
 const friendsList = {
     data: [
         {
@@ -12,6 +14,8 @@ const friendsList = {
         },
     ]
 }
+
+
 
 export default function addRemoveFriends(state = friendsList, action) {
     switch (action.type) {
@@ -29,6 +33,5 @@ export default function addRemoveFriends(state = friendsList, action) {
             }
         default:
             return state
-
     }
 }

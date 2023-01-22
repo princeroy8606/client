@@ -6,16 +6,19 @@ import Share from '../../assets/share.png';
 import Follow from '../../assets/add-friend.png';
 import { useState } from 'react';
 import { addFriends } from '../../actions/friends';
-import { useDispatch } from 'react-redux';
+import { removeFriend } from '../../actions/friends';
+import { useDispatch, useSelector } from 'react-redux';
 const Post = ({ post }) => {
 
-    //adding user
+    //adding / removing friend
     const [following, setFollowing] = useState(false)
     const dispatch = useDispatch();
 
     const handleClick = (e) => {
         if (following !== true) {
-            dispatch(addFriends({ id: post.id, name: post.name, profile: post.profilePic }))
+            dispatch(addFriends({ id: post.id, name: post.name, profile: post.profilePic, Action: false }))
+        } else {
+            dispatch(removeFriend({ id: post.id }))
         }
         setFollowing(!following)
     }

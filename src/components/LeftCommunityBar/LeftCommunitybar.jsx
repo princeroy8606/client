@@ -2,24 +2,10 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import Dijango from '../../assets/dijango.png';
 import Friends from './Friends';
-// import 
 import './index.css';
 function LeftCommunitybar() {
 
   const friendsList = useSelector(state => state.addRemoveFriends)
-
-  // const friendsList = [
-  //   {
-  //     id: 8,
-  //     name: "Tom",
-  //     profile: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyfLCs5lVr1Ev5xUChMTIDKUSn5C8Wa223HA&usqp=CAU",
-  //   },
-  //   {
-  //     id: 9,
-  //     name: "jass",
-  //     profile: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRddwWLweaFxOmeLoT4hixHZLU_PzXHEXJQvA&usqp=CAU",
-  //   },
-  // ]
 
   return (
     <div className='left-Com-sidebar'>
@@ -72,30 +58,11 @@ function LeftCommunitybar() {
             <p>Popular</p>
           </div>
           <div className="friends-box">
-
             {
               friendsList.data.map((item) => (
                 <Friends data={item} />
               ))
             }
-            {/* <div className="frinds">
-              <div className='frinds-profile'>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPbRtfnYvr7cVmZGjfyuSpE7mSY9ftEZzLYg&usqp=CAU" alt="" />
-                <p>Tom</p>
-              </div>
-              <div className="remove-friends">
-                <img src={Removefrnd} alt="" />
-              </div>
-            </div>
-            <div className="frinds">
-              <div className='frinds-profile'>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRddwWLweaFxOmeLoT4hixHZLU_PzXHEXJQvA&usqp=CAU" alt="" />
-                <p>Jazz</p>
-              </div>
-              <div className="remove-friends">
-                <img src={Removefrnd} alt="" />
-              </div>
-            </div> */}
           </div>
           <div className="veiw-all-friends">
             <p>VEIW ALL</p>
