@@ -6,6 +6,7 @@ export const addFriends = (data) => {
 }
 
 export const removeFriend = (id) => {
+    console.log(id)
     return {
         type: 'REMOVE_FRIEND',
         payload: id
