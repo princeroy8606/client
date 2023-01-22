@@ -23,7 +23,7 @@ export default function addRemoveFriends(state = friendsList, action) {
         case 'REMOVE_FRIEND':
             return {
                 ...state,
-                data: state.data.filter((id) => id !== action.payload)
+                data:state.data.filter((friend) => friend.id !== action.payload)
             }
         default:
             return state
