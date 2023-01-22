@@ -5,8 +5,23 @@ import Comment from '../../assets/message.png';
 import Share from '../../assets/share.png';
 import Follow from '../../assets/add-friend.png';
 import { useState } from 'react';
+import { addFriends } from '../../actions/friends';
+import { useDispatch } from 'react-redux';
 const Post = ({ post }) => {
 
+    //adding user
+    const [following, setFollowing] = useState(false)
+    const dispatch = useDispatch();
+
+    const handleClick = (e) => {
+        if (following !== true) {
+            dispatch(addFriends({ id: post.id, name: post.name, profile: post.profilePic }))
+        }
+        setFollowing(!following)
+    }
+
+
+    //handling likes
     const [like, setLike] = useState(false)
     const handleLike = () => {
         if (like !== true) {
@@ -17,8 +32,8 @@ const Post = ({ post }) => {
         console.log(like)
         setLike(!like)
     }
-    
-    
+
+
     return (
         <div className='post-card'>
             {/*  */}
@@ -31,10 +46,14 @@ const Post = ({ post }) => {
                             <p>{post.date}</p>
                         </div>
                     </div>
-                    <div className="add-friend">
-                        <img src={Follow} alt="+" />
-                        <p>Follow</p>
-                    </div>
+                    {
+                        following ? <div className="add-friend" onClick={handleClick}>
+                            <p>Following</p>
+                        </div> : <div className="add-friend" onClick={handleClick}>
+                            <img src={Follow} alt="+" />
+                            <p>Follow</p>
+                        </div>
+                    }
                 </div>
                 <div className="posted-text">
                     <p>{post.postText}</p>

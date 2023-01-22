@@ -1,22 +1,25 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import Dijango from '../../assets/dijango.png';
 import Friends from './Friends';
-
+// import 
 import './index.css';
 function LeftCommunitybar() {
 
-  const friendsList = [
-    {
-      id: 1,
-      name: "Tom",
-      profile: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyfLCs5lVr1Ev5xUChMTIDKUSn5C8Wa223HA&usqp=CAU",
-    },
-    {
-      id: 2,
-      name: "jass",
-      profile: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRddwWLweaFxOmeLoT4hixHZLU_PzXHEXJQvA&usqp=CAU",
-    },
-  ]
+  const friendsList = useSelector(state => state.addRemoveFriends)
+
+  // const friendsList = [
+  //   {
+  //     id: 8,
+  //     name: "Tom",
+  //     profile: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyfLCs5lVr1Ev5xUChMTIDKUSn5C8Wa223HA&usqp=CAU",
+  //   },
+  //   {
+  //     id: 9,
+  //     name: "jass",
+  //     profile: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRddwWLweaFxOmeLoT4hixHZLU_PzXHEXJQvA&usqp=CAU",
+  //   },
+  // ]
 
   return (
     <div className='left-Com-sidebar'>
@@ -71,8 +74,8 @@ function LeftCommunitybar() {
           <div className="friends-box">
 
             {
-              friendsList.map((item) => (
-                <Friends data={item}/>
+              friendsList.data.map((item) => (
+                <Friends data={item} />
               ))
             }
             {/* <div className="frinds">
