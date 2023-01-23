@@ -1,11 +1,12 @@
 import { BrowserRouter as Router } from 'react-router-dom'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import AllRoutes from './AllRoutes'
 import { fetchAllQuestions } from './actions/question'
 import { fetchAllUsers } from './actions/users'
+import ChatBot from './components/chatBot/ChatBot';
 
 function App() {
   const dispatch = useDispatch()
@@ -14,11 +15,30 @@ function App() {
     dispatch(fetchAllUsers())
   }, [dispatch])
 
+  const [open, setOpen] = useState(false);
+  const handleClick = () => {
+    setOpen(!open)
+  }
+
   return (
     <div className="App">
       <Router>
         <Navbar />
         <AllRoutes />
+        {
+          open ? (
+            <div className={`chat-bot-container ${open === true ? "active" : "inactive"}`}>
+              <div className="chat-bot-cover">
+                <ChatBot />
+              </div>
+            </div>
+          ) : (
+            <></>
+          )
+        }
+        <div className="bot-icon"
+          onClick={handleClick}>
+        </div>
       </Router>
     </div>
   );

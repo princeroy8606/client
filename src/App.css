@@ -1,4 +1,5 @@
 .home-container-1 {
+  position: relative;
   min-height: 100vh;
   max-width: 1250px;
   width: 100%;
@@ -25,20 +26,53 @@
   width: 100vw;
   height: 100vh;
 }
-/* .community-workspace {
-  width: 100%;
-  height: 110vh;
-  display: flex;
-  justify-content: space-between;
-} */
+.chat-bot-container {
+  position: absolute;
+  border-radius: 1rem;
+  max-width: 28rem;
+  max-height: 40rem;
+  bottom: 10rem;
+  right: 3rem;
+}
 
-@media screen and (max-width:800px) {
-  .community-home LeftCommunitybar{
+.chat-bot-cover {
+  width: 100%;
+  height: 90%;
+}
+
+.bot-icon {
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  bottom: 0;
+  right: 3rem;
+  background-image: url(./assets/bot.gif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 5px 5px 5px 5px rgb(17, 4, 82);
+  transition: 0.2s;
+}
+.bot-icon:hover {
+  bottom: 1rem;
+  right: 3.5rem;
+}
+
+@media screen and (max-width: 800px) {
+  .community-home LeftCommunitybar {
     background: #000;
   }
-  .home-container-2{
+  .home-container-2 {
     width: 100%;
-    padding: .5rem;
-    
+    padding: 0.5rem;
+  }
+  .bot-icon{
+    width: 4rem;
+    height: 4rem;
+    right: 1rem;
+  }
+  .chat-bot-container{
+    left: 2rem;
   }
 }
