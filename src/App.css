@@ -22,12 +22,6 @@
   justify-content: space-between;
 }
 .allroutes {
-  /* position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background: rgb(116, 116, 112);
-  opacity: 0.2; */
-
   filter: blur(5px);
 }
 
@@ -39,7 +33,7 @@
   position: absolute;
   border-radius: 1rem;
   max-width: 28rem;
-  max-height: 40rem;
+  max-height: 45rem;
   bottom: 10rem;
   right: 3rem;
 }
@@ -77,11 +71,12 @@
     padding: 0.5rem;
   }
   .bot-icon {
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
     right: 1rem;
+    bottom: 1.5rem;
   }
   .chat-bot-container {
-    left: 2rem;
+    left: 5%;
   }
 }

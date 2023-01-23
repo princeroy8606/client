@@ -13,12 +13,14 @@ const ChatBox = styled(Box)(() => ({
     flexWrap: 'wrap',
     height: 'auto', maxHeight: 500, width: '100%', borderRadius: '0.25rem', overflowY: 'scroll',
     '&::-webkit-scrollbar': {
-        width: 10
+        width: 2
     },
     '&::-webkit-scrollbar-track': {
         backgroundColor: 'transpernet'
     },
     '&::-webkit-scrollbar-thumb': {
+        maxHeight:1,
+        height:1,
         backgroundColor: 'black',
         borderRadius: 5
 
@@ -39,7 +41,7 @@ const Message = styled(Typography)(({ theme, data }) => ({
     width: '100%',
     display: 'flex',
     justifyContent: 'flex-end',
-    background: `${Object.keys(data)[0] === 'ans' ? '#ccc' : '#eee'}`,
+    background: `${Object.keys(data)[0] === 'ans' ? '#00f6ac' : '#eee'}`,
     borderRadius: `${Object.keys(data)[0] === 'ans' ? '0.5rem 0.5rem 0.5rem 0' : '0.5rem 0.5rem 0 0.5rem'}`,
 }))
 
@@ -78,14 +80,14 @@ const ChatBot = () => {
     }, [answer])
 
     return (
-        <Container sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between", minWidth: 300, minHeight: 400, backgroundColor: "#fe938c", borderRadius: '1rem' }}>
+        <Container sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between", minWidth: 300, minHeight: 450, background: " linear-gradient(to left, #283048, #859398)", borderRadius: '1rem' ,paddingLeft:0}}>
             <ChatBox>
                 <div style={{
                     borderRadius: '0.25rem',
                     display: 'flex',
                     maxWidth: '100%',
                     height: 'fit-content',
-                    margin: '0.5rem 0',
+                    margin: '0.2rem 0',
                     flexDirection: 'row',
                 }}>
                     <div style={{
@@ -103,7 +105,7 @@ const ChatBot = () => {
                     <p style={{
                         padding: '0.5rem',
                         width: 'fit-content',
-                        background: '#dfdc',
+                        background: '#00e6ac',
                         borderRadius: '0.5rem 0.5rem 0.5rem 0'
                     }}>
                         Hi,<br />
@@ -129,16 +131,16 @@ const ChatBot = () => {
 
                                 }} />
                             }
-                            <Message data={msg}>{msg.qp || msg.ans}</Message>
+                            <Message data={msg} key={msg}>{msg.qp || msg.ans}</Message>
                         </div>
                     </MessageContainer>
                 ))}
             </ChatBox>
 
             <Stack flexDirection='row' justifyContent='space-between' columnGap='1rem'
-                sx={{ background: '#d9aea1', padding: '.5rem 0rem 0rem .5rem', borderRadius: '1rem', marginBottom: '.5rem' }}>
+                sx={{ background: '#ffffcc', padding: '.5rem 0rem 0rem .4rem', borderRadius: '1rem', marginBottom: '.5rem',marginLeft:'.5rem' }}>
                 <TextField
-                    sx={{ color: '#fff' }}
+                    sx={{color:'red',padding:0 }}
                     value={input}
                     fullWidth
                     placeholder=" Ask your douts"

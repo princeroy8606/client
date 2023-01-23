@@ -39,7 +39,7 @@ function App() {
           open ? (
             <div className={`chat-bot-container ${open === true ? "active" : "inactive"}`}>
               <div className="chat-bot-cover">
-                <ChatBot />
+                <ChatBot/>
               </div>
             </div>
           ) : (
