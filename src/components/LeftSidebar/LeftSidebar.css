@@ -47,6 +47,8 @@
 /*  */
 @media screen and (max-width: 800px) {
     .left-sidebar{
-      display: none;
+        background-color: aliceblue;
+        position: absolute;
+      /* display: none; */
     }
   }
