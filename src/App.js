@@ -24,7 +24,17 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
-        <AllRoutes />
+        {
+          open ? (
+            <>
+              <div className="allroutes">
+              <AllRoutes />
+              </div>
+            </>
+          ) : (
+            <AllRoutes />
+          )
+        }
         {
           open ? (
             <div className={`chat-bot-container ${open === true ? "active" : "inactive"}`}>
