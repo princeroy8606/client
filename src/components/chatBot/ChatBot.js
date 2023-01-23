@@ -12,6 +12,7 @@ const ChatBox = styled(Box)(() => ({
     alignItems: 'flex-start',
     flexWrap: 'wrap',
     height: 'auto', maxHeight: 500, width: '100%', borderRadius: '0.25rem', overflowY: 'scroll',
+    marginBottom:'.5rem',
     '&::-webkit-scrollbar': {
         width: 2
     },
@@ -138,9 +139,9 @@ const ChatBot = () => {
             </ChatBox>
 
             <Stack flexDirection='row' justifyContent='space-between' columnGap='1rem'
-                sx={{ background: '#ffffcc', padding: '.5rem 0rem 0rem .4rem', borderRadius: '1rem', marginBottom: '.5rem',marginLeft:'.5rem' }}>
+                sx={{ background: '#506363', padding: '.5rem 0rem 0rem .8rem', borderRadius: '1rem', marginBottom: '.5rem',marginLeft:'.5rem'}}>
                 <TextField
-                    sx={{color:'red',padding:0 }}
+                    sx={{WebkitTextFillColor:'white',width:550}}
                     value={input}
                     fullWidth
                     placeholder=" Ask your douts"
