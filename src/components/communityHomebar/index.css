@@ -41,7 +41,7 @@
   border-radius: 0.25rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 .post-text {
   padding-left: 0.25rem;
@@ -49,17 +49,34 @@
   width: 100%;
   height: 100%;
   border-radius: 0 0 0.25rem 0.25rem;
-
   border: none;
 }
 .post-text:focus {
   outline: none;
 }
+.post-files {
+  display: flex;
+  flex-direction: column;
+}
+.post-files label {
+  width: 2rem;
+  height: 100%;
+}
+.post-files img {
+  width: 100%;
+}
+.post-btn {
+  width: 4rem;
+  height: 3rem;
+  background-color: white;
+  border: none;
+  font-weight: 700;
+  color: rgb(117, 123, 123);
+}
 
 .postarea-container {
   width: 100%;
   height: 78%;
-  /* background: green; */
 }
 .postarea-top {
   display: flex;
@@ -67,7 +84,6 @@
   justify-content: space-between;
   width: 100%;
   height: 5rem;
-  /* background: blue; */
 }
 .left-cover {
   padding-left: 0.5rem;
@@ -126,14 +142,14 @@
 }
 
 .post-container::-webkit-scrollbar {
- width: 0rem;
+  width: 0rem;
 }
-.post-container::-webkit-scrollbar-thumb{
+.post-container::-webkit-scrollbar-thumb {
   background: rgb(255, 253, 251);
   border-radius: 1.5rem;
   height: 1rem;
 }
-.post-container::-webkit-scrollbar-track{
+.post-container::-webkit-scrollbar-track {
   background: rgb(249, 247, 249);
 }
 
@@ -146,7 +162,6 @@
   margin-bottom: 1rem;
   box-shadow: 2px 2px 5px 2px rgb(183, 182, 180);
 }
-
 
 .person {
   width: 100%;
@@ -191,11 +206,12 @@
 }
 
 .post-item img {
-  padding: 0.5rem;
+  padding-left: 0.25rem;
   width: 97%;
 }
 .like-display {
   padding-left: 0.5rem;
+  color: rgb(110, 111, 112);
 }
 
 .response {
@@ -218,6 +234,8 @@
   width: 30%;
   border-radius: 0.5rem;
   cursor: pointer;
+  font-weight: 500;
+  color: rgb(100, 101, 101);
 }
 .like:hover,
 .comment:hover,
@@ -248,20 +266,27 @@
 /*  */
 
 @media screen and (max-width: 800px) {
-  .community-homebar{
+  .community-homebar {
     width: 100%;
-    padding: .5rem;
+    padding: 0.5rem;
   }
-  /* ..post-card{
-
-  } */
-  .activity-feed h1{
+  .activity-feed h1 {
     font-size: 2rem;
   }
-  .post-box{
-    height: 6.5rem;
+  .post-box {
+    height: 6rem;
   }
-  .posted-text p{
+  .posted-text p {
     margin-top: 0;
+  }
+  .post-files label {
+    width: 1.5rem;
+    height: 100%;
+  }
+  .post-text {
+    font-size: 0.8rem;
+  }
+  .posted-text{
+    font-size: .8rem;
   }
 }

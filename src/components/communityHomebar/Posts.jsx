@@ -18,7 +18,7 @@ function Posts({ data }) {
             id: 2,
             name: "Carton",
             date: "02 jan 2023",
-            postText: "It’s been a busy quarter for the company. We celebrated a handful of big milestones over the last three months. We added a new Chief Technology Officer, Jody Bailey, to our leadership team, announced Stack Overflow for Teams entering the Microsoft Azure Marketplace, launched exciting initiatives like Staging Ground, and released insights from this year’s Developer Survey.",
+            postText: "It’s been a busy quarter for the company. We celebrated a handful of big milestones over the last three months. ",
             image: 'https://149351115.v2.pressablecdn.com/wp-content/uploads/2022/07/q2-2022-ceo_00.png',
             vedio: '',
             profilePic: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRAf9gA-CRlCv5tHlzbNDJnmqvnNG1jRrHGA&usqp=CAU",
