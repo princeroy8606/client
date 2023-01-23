@@ -274,7 +274,7 @@
     font-size: 2rem;
   }
   .post-box {
-    height: 6rem;
+    height: 6.5rem;
   }
   .posted-text p {
     margin-top: 0;
@@ -286,7 +286,11 @@
   .post-text {
     font-size: 0.8rem;
   }
-  .posted-text{
+  .posted-text {
+    font-size: 0.8rem;
+  }
+  .postarea-top{
     font-size: .8rem;
+    height: 3.5rem;
   }
 }
