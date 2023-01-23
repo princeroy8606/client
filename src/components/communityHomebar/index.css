@@ -126,15 +126,15 @@
 }
 
 .post-container::-webkit-scrollbar {
- width: .5rem;
+ width: 0rem;
 }
 .post-container::-webkit-scrollbar-thumb{
-  background: rgb(236, 194, 165);
+  background: rgb(255, 253, 251);
   border-radius: 1.5rem;
   height: 1rem;
 }
 .post-container::-webkit-scrollbar-track{
-  background: rgb(143, 142, 143);
+  background: rgb(249, 247, 249);
 }
 
 /* post card design */
@@ -250,5 +250,18 @@
 @media screen and (max-width: 800px) {
   .community-homebar{
     width: 100%;
+    padding: .5rem;
+  }
+  /* ..post-card{
+
+  } */
+  .activity-feed h1{
+    font-size: 2rem;
+  }
+  .post-box{
+    height: 6.5rem;
+  }
+  .posted-text p{
+    margin-top: 0;
   }
 }
