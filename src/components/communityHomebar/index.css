@@ -16,7 +16,7 @@
   height: 8rem;
   display: flex;
   flex-direction: column;
-  padding: 1px;
+  /* padding: 1px; */
 }
 .user-details {
   background: #fdf7e2;
