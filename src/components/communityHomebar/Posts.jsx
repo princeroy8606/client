@@ -66,7 +66,7 @@ function Posts({ data }) {
             <div className="post-container">
                 {
                     post?.map((item) => (
-                        <Post post={item} />
+                        <Post post={item}  key={item.postText}/>
                     ))
                 }
             </div>

@@ -60,7 +60,7 @@ function LeftCommunitybar() {
           <div className="friends-box">
             {
               friendsList.data.map((item) => (
-                <Friends data={item} />
+                <Friends data={item} key={item.id} />
               ))
             }
           </div>

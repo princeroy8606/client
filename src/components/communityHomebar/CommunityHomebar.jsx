@@ -12,15 +12,17 @@ const CommunityHomebar = () => {
     let id = 4;
 
     const handleClick = () => {
-        seData({
-            id: id,
-            name: "jecob",
-            date: "01-12-2023",
-            postText: text,
-            image: file,
-            profilePic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKXvbOTtM0YatiO0WJ06pJmvaj6a7Dq2kJtg&usqp=CAU',
-            likes: 1,
-        });
+        if (text || file) {
+            seData({
+                id: id,
+                name: "jecob",
+                date: "01-12-2023",
+                postText: text,
+                image: file,
+                profilePic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKXvbOTtM0YatiO0WJ06pJmvaj6a7Dq2kJtg&usqp=CAU',
+                likes: 1,
+            });
+        }
     }
     useEffect(() => {
         if (data && Object.keys(data).length !== 0) {
@@ -40,7 +42,7 @@ const CommunityHomebar = () => {
                     <div className="add-text-post">
                         <input type='text' className='post-text' placeholder='Write here or use @ to mention someone' onChange={(e) => setText(e.target.value)} />
                         <div className="post-files">
-                            <label for="files" class="btn">
+                            <label htmlFor="files">
                                 <img src={addImage} alt="" />
                             </label>
                             <input type='file' id='files' style={{ display: 'none' }}
