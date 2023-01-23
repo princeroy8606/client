@@ -1,16 +1,21 @@
-// import React, { useEffect } from 'react'
+
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 // import decode from 'jwt-decode'
 
 import logo from '../../assets/logo.png'
-import menu from '../../assets/menu.png'
+import menuBar from '../../assets/menu.png'
 import search from '../../assets/search-solid.svg'
 import Avatar from '../../components/Avatar/Avatar'
 import './Navbar.css'
 import { setCurrentUser } from '../../actions/currentUser'
+import { sidebarHide, sidebarShow } from '../../actions/friends'
+import { useState } from 'react'
 
 const Navbar = () => {
+
+    const [menu, setMenu] = useState(false)
+
     const dispatch = useDispatch()
     var User = useSelector((state) => (state.currentUserReducer))
     const navigate = useNavigate();
@@ -21,11 +26,20 @@ const Navbar = () => {
         dispatch(setCurrentUser(null))
     }
 
+    const handleMenu = () => {
+        setMenu(!menu)
+        if (menu) {
+            dispatch(sidebarShow(menu))
+        } else {
+            dispatch(sidebarHide(menu))
+        }
+    }
+
     return (
         <nav className='main-nav'>
             <div className='navbar'>
-                <div className="nav-hamburger">
-                    <img src={menu} alt="" />
+                <div className="nav-hamburger" onClick={handleMenu}>
+                    <img src={menuBar} alt="" />
                 </div>
                 <Link to='/' className='nav-item nav-logo'>
                     <img src={logo} alt='logo' />

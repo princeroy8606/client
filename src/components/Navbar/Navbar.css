@@ -17,6 +17,7 @@
 .nav-hamburger {
   width: 1.5rem;
   height: 1.5rem;
+  display: none;
 }
 
 .nav-hamburger img {
@@ -59,7 +60,6 @@
   flex-grow: 1;
   padding: 0px 12px;
   position: relative;
-  background-color: yellow;
 }
 
 .navbar form input {
@@ -95,12 +95,14 @@
   .main-nav {
     width: 100%;
     margin: 0;
-    justify-content: flex-start;
   }
   .nav-btn {
     display: none;
   }
   .navbar form {
     display: none;
+  }
+  .nav-hamburger{
+    display: block;
   }
 }

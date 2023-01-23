@@ -35,3 +35,5 @@ export default function addRemoveFriends(state = friendsList, action) {
             return state
     }
 }
+
+

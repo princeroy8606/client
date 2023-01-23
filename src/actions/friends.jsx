@@ -12,3 +12,18 @@ export const removeFriend = (id) => {
         payload: id
     }
 }
+
+export const sidebarShow =(value)=>{
+    console.log(value)
+    return{
+        type:'SHOW',
+        payload:value
+    }
+}
+export const sidebarHide =(value)=>{
+    console.log(value)
+    return{
+        type:'HIDE',
+        payload:value
+    }
+}

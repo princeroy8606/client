@@ -14,7 +14,7 @@ const CommunityHomebar = () => {
     const handleClick = () => {
         seData({
             id: id,
-            name: "jacob",
+            name: "jecob",
             date: "01-12-2023",
             postText: text,
             image: file,

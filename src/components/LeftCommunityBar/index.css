@@ -56,15 +56,15 @@
 }
 
 .recent-topics::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 0.1rem;
 }
 .recent-topics::-webkit-scrollbar-thumb {
-  background: rgb(236, 194, 165);
+  background: rgba(123, 123, 122, 0.503);
   border-radius: 1.5rem;
   height: 1rem;
 }
 .recent-topics::-webkit-scrollbar-track {
-  background: rgb(143, 142, 143);
+  background: rgb(191, 188, 191);
 }
 
 .friends-container {
@@ -143,7 +143,7 @@
   margin: 0;
 }
 .friends-box::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 0.15rem;
 }
 .friends-box::-webkit-scrollbar-thumb {
   background: rgb(236, 194, 165);
