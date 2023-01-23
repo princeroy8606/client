@@ -44,3 +44,12 @@
 .news-box h5 {
   margin: 0;
 }
+
+
+/*  */
+
+@media screen and (max-width: 800px) {
+  .right-Com-sidebar{
+    display: none;
+  }
+}

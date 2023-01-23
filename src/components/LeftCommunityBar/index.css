@@ -153,3 +153,11 @@
 .friends-box::-webkit-scrollbar-track {
   background: rgb(143, 142, 143);
 }
+
+/* mediaQuerys */
+
+@media screen and (max-width: 800px) {
+  .left-Com-sidebar{
+    display: none;
+  }
+}

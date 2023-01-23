@@ -67,3 +67,10 @@
     border-radius: 2px;
     font-size: 13px;
 }
+/*  */
+
+@media screen and (max-width: 800px) {
+    .right-sidebar{
+      display: none;
+    }
+  }

@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 // import decode from 'jwt-decode'
 
 import logo from '../../assets/logo.png'
+import menu from '../../assets/menu.png'
 import search from '../../assets/search-solid.svg'
 import Avatar from '../../components/Avatar/Avatar'
 import './Navbar.css'
@@ -20,20 +21,12 @@ const Navbar = () => {
         dispatch(setCurrentUser(null))
     }
 
-    // useEffect(() => {
-    //     const token = User?.token 
-    //     if(token){
-    //         const decodedToken = decode(token)
-    //         if(decodedToken.exp * 1000 < new Date().getTime()){
-    //             handleLogout()
-    //         }
-    //     }
-    //     dispatch(setCurrentUser( JSON.parse(localStorage.getItem('Profile'))))
-    // },[User?.token, dispatch, handleLogout])
-
     return (
         <nav className='main-nav'>
             <div className='navbar'>
+                <div className="nav-hamburger">
+                    <img src={menu} alt="" />
+                </div>
                 <Link to='/' className='nav-item nav-logo'>
                     <img src={logo} alt='logo' />
                 </Link>
@@ -52,6 +45,7 @@ const Navbar = () => {
                     </>
                 }
             </div>
+
         </nav>
     )
 }
